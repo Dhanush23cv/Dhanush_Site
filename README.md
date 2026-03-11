@@ -1,27 +1,114 @@
-# Angulartailwind
+# Health_Center (Angular + Tailwind)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+Modern health-tracking UI built with Angular 17 + Tailwind CSS.
 
-## Development server
+## 🚀 Project Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+`Health_Center` provides basic health record flows:
 
-## Code scaffolding
+- `View Entries` (default route `/view`)
+- `Add Entries` (`/add`)
+- `Analysis` (`/analysis`)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Implemented with Angular Router and scoped component modules:
+- `src/app/view-entries`
+- `src/app/add-entries`
+- `src/app/analysis`
 
-## Build
+## 🧩 Tech Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular 17.3.x
+- Tailwind CSS 3.4.x
+- TypeScript 5.4.x
+- RxJS 7.x
+- Karma + Jasmine for unit tests
+- Angular CLI for build tooling
 
-## Running unit tests
+## 🛠️ Prerequisites
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Node.js 18+ or higher
+- npm 10+ (or yarn equivalent)
+- Angular CLI globally (recommended): `npm install -g @angular/cli`
 
-## Running end-to-end tests
+## ⚙️ Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+cd d:\Dhanush\Projects\Health_Center
+npm install
+```
 
-## Further help
+## ▶️ Development Server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+npm start
+```
+
+Open: `http://localhost:4200`
+
+Hot reload is enabled (save file updates automatically).
+
+## 📦 Production Build
+
+```bash
+npm run build
+```
+
+Dist output: `dist/angulartailwind` (per Angular defaults).
+
+## 🔍 Tests
+
+### Unit tests
+
+```bash
+npm test
+```
+
+### E2E (not configured by default)
+
+No E2E package is currently installed. Add one and configure in `angular.json` if required.
+
+## 🗂️ Project Structure
+
+```
+src/
+  app/
+    add-entries/
+    analysis/
+    view-entries/
+    app.component.*
+    app.routes.ts
+  assets/
+  styles.css
+  main.ts
+```
+
+### Routing
+
+Defined in `src/app/app.routes.ts`
+
+- `/view` -> `ViewEntriesComponent`
+- `/add` -> `AddEntriesComponent`
+- `/analysis` -> `AnalysisComponent`
+- default redirect to `/view`
+
+## 🔧 Configuration Notes
+
+- Tailwind is integrated via `postcss` in Angular CLI config (default generated style pipeline).
+- Use `src/styles.css` for global Tailwind directives (`@tailwind base`, `@tailwind components`, `@tailwind utilities`).
+
+## ✅ Contribution
+
+1. Fork repository
+2. Create feature branch `feature/your-change`
+3. `npm install`
+4. `npm start`
+5. Create PR with a descriptive title and tests
+
+## 📜 License
+
+MIT (or add your preferred license).
+
+## 📬 Contact
+
+For issues, file a GitHub issue or reach out to repository owner.
+
